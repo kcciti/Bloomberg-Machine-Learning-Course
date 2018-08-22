@@ -27,6 +27,7 @@
   CChecks:
     - {SLT and SGD Concept Check Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/1-Lec-Check.pdf"}
     - {SLT and SGD Concept Check Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/1-Lec-Check_sol.pdf"}
+    - {"Homework 1: §3": "#assignment-homework-1"}
 -
   Title: "4. Stochastic Gradient Descent"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02b.SGD.pdf"
@@ -42,6 +43,8 @@
   CChecks:
     - {SLT and SGD Concept Check Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/1-Lec-Check.pdf"}
     - {SLT and SGD Concept Check Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/1-Lec-Check_sol.pdf"}
+    - {"Homework 1: §2": "#assignment-homework-1"}
+    - {"Homework 2: §1,2": "#assignment-homework-2"}
 -
   Title: "5. Excess Risk Decomposition"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02c.excess-risk-decomposition.pdf"
@@ -55,10 +58,11 @@
   Title: "6. L1 and L2 regularization"
   Video: "https://www.youtube.com/embed/d6XDOS4btck"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/03a.L1L2-regularization.pdf"
-  Summary: "<p>We introduce \"regularization\", our main defense against overfitting. We discuss the equivalence of the penalization and constraint forms of regularization (see <a href=\"#assignment-homework-4\">Hwk 4 Problem 8</a> for a precise statement). We compare regularization paths of L1- and L2-regularized linear least squares regression (i.e. \"lasso\" and \"ridge\" regression, respectively), and give a geometric argument for why lasso often gives \"sparse\" solutions. Finally, we present \"coordinate descent\", our second major approach to optimization.  When applied to the lasso objective function, coordinate descent takes a particularly clean form and is known as the \"shooting algorithm\".</p>"
+  Summary: "<p>We introduce \"regularization\", our main defense against overfitting. We discuss the equivalence of the penalization and constraint forms of regularization (see <a href=\"#assignment-homework-4\">Hwk 4 Problem 8</a>), and we introduce L1 and L2 regularization, the two most important forms of regularization for linear models.  When L1 and L2 regularization are applied to linear least squares, we get \"lasso\" and \"ridge\" regression, respectively. We compare the \"regularization paths\" for lasso and ridge regression, and give a geometric argument for why lasso often gives \"sparse\" solutions. Finally, we present \"coordinate descent\", our second major approach to optimization.  When applied to the lasso objective function, coordinate descent takes a particularly clean form and is known as the \"shooting algorithm\".</p>"
   CChecks:
     - {Excess Risk and L1/L2 Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/2-Lec-Check.pdf"}
     - {Excess Risk and L1/L2 Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/2-Lec-Check_sol.pdf"}
+    - {"Homework 2": "#assignment-homework-2"}
   Notes:
     - {Completing the Square: "https://davidrosenberg.github.io/mlcourse/Notes/completing-the-square.pdf"}
     - {Lasso Lecture Prep Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/2-PreLec-Check.pdf"}
@@ -69,10 +73,12 @@
   Title: "7. Lasso, Ridge, and Elastic Net"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/03b.elastic-net.pdf"
   Video: "https://www.youtube.com/embed/KIoz_aa1ed4"
-  Summary: "<p>We continue our discussion of ridge and lasso regression by focusing on the case of correlated features, which is a common occurrence in machine learning practice. We will see that ridge solutions tend to spread weight equally among highly correlated features, while lasso solutions may be unstable in the case of highly correlated features. Finally, we introduce the \"elastic net\", a combination of L1 and L2 regularization, which ameliorates the instability while maintaining some of the properties of lasso. (Credit to Brett Bernstein for the excellent graphics.)"
+  Summary: "<p>We continue our discussion of ridge and lasso regression by focusing on the case of correlated features, which is a common occurrence in machine learning practice. We will see that ridge solutions tend to spread weight equally among highly correlated features, while lasso solutions may be unstable in the case of highly correlated features. Finally, we introduce the \"elastic net\", a combination of L1 and L2 regularization, which ameliorates the instability of L1 while still allowing for sparsity in the solution. (Credit to Brett Bernstein for the excellent graphics.)"
   Notes:
     - {Lasso and Elastic Net (ipynb): "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Notebooks/Lasso%20and%20Elastic%20Net/lasso_and_elastic_net.ipynb"}
     - {Elastic Net correlation theorem: "https://davidrosenberg.github.io/mlcourse/Notes/elastic-net-theorem.pdf"}
+  CChecks:
+    - {"Homework 2: §4.2,5": "#assignment-homework-2"}
   References:
     - {"Zou and Hastie's Elastic Net Paper (2005)": "https://web.stanford.edu/~hastie/Papers/B67.2%20(2005)%20301-320%20Zou%20&%20Hastie.pdf"}
     - {'Mairal, Bach, and Ponce on Sparse Modeling': "https://arxiv.org/pdf/1411.3230v2.pdf"}
@@ -80,7 +86,11 @@
   Title: "8. Loss Functions for Regression and Classification"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/04a.loss-functions.pdf"
   Video: "https://www.youtube.com/embed/1oi_Mwozj5w"
-  Summary: "We start by discussing absolute loss and Huber loss, two alternative to the square loss for the regression setting, which are more robust to outliers.  Next, we introduce our approach to the classification setting, introducing the notions of score, margin, and margin-based loss functions. We discuss basic properties of the hinge loss (i.e SVM loss), logistic loss, and even the square loss, considered as a margin-based loss.  The interplay between the loss function we use for training and the properties of the prediction function we end up with is a theme we will return to several times during the course."
+  Summary: "We start by discussing absolute loss and Huber loss.  We consider them as alternatives to the square loss that are more robust to outliers.  Next, we introduce our approach to the classification setting, introducing the notions of score, margin, and margin-based loss functions. We discuss basic properties of the hinge loss (i.e SVM loss), logistic loss, and the square loss, considered as margin-based losses.  The interplay between the loss function we use for training and the properties of the prediction function we end up with is a theme we will return to several times during the course."
+  CChecks:
+    - {"Homework 3: §2,3": "#assignment-homework-3"}
+    - {"Homework 5: §2": "#assignment-homework-5"}
+
 -
   Title: "9. Lagrangian Duality and Convex Optimization"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/04b.convex-optimization.pdf"
@@ -94,6 +104,7 @@
   CChecks:
     - {Subgradients and Lagrangian Duality Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/4-Lec-Check.pdf"}
     - {Subgradients and Lagrangian Duality Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/4-Lec-Check_sol.pdf"}
+    - {"Homework 4: §8": "#assignment-homework-4"}
   References:
 -
   Title: "10. Support Vector Machines"
@@ -106,6 +117,9 @@
     - {Pre-lecture warmup for SVM and Lagrangians: "https://davidrosenberg.github.io/mlcourse/Notes/svm-lecture-prep.pdf"}
     - {Support Vector Machines: "https://davidrosenberg.github.io/mlcourse/Notes/svm-notes.pdf"}
     - {SVM Insights from Duality: "https://davidrosenberg.github.io/mlcourse/Notes/SVM-main-points.pdf"}
+  CChecks:
+    - {"Homework 3": "#assignment-homework-3"}
+    - {"Homework 4: §4": "#assignment-homework-4"}
   References:
     - {"Geometric Derivation of SVMs": "https://davidrosenberg.github.io/mlcourse/Labs/3-SVM-Notes_sol.pdf"}
     - {"Note on the Uniqueness of SVMs": "https://davidrosenberg.github.io/mlcourse/Labs/UniquenessOfSVM.pdf"}
@@ -122,6 +136,7 @@
   CChecks:
     - {Subgradients and Lagrangian Duality Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/4-Lec-Check.pdf"}
     - {Subgradients and Lagrangian Duality Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/4-Lec-Check_sol.pdf"}
+    - {"Homework 3": "#assignment-homework-3"}
   References:
     - {"Boyd's subgradient notes": "http://web.stanford.edu/class/ee364b/lectures.html"}
 -
@@ -134,13 +149,15 @@
     - {Ingesting text with BOW: "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Notebooks/Features/test_BOW.ipynb"}
     - {Polynomial features: "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Notebooks/Features/polynomial_feature_comparison.ipynb"}
     - {Vector quantization with k-means: "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Notebooks/Features/vector_quantization.ipynb"}
+  CChecks:
+    - {"Homework 3: §6,7,8": "#assignment-homework-3"}
   References:
-    - {Feature Engineering for Machine Learning by Casari and Zheng: "https://www.safaribooksonlinefeatures.com/library/view/feature-engineering-for/9781491953235/"}
+    - {Feature Engineering for Machine Learning by Casari and Zheng: "http://shop.oreilly.com/product/0636920049081.do"}
 -
   Title: "13. Kernel Methods"
   Summary: "<p>With linear methods, we may need a whole lot of features to get a hypothesis space that's expressive enough to fit our data -- there can be orders of magnitude more features than training examples. While regularization can control overfitting, having a huge number of features can make things computationally very difficult, if handled naively.  For objective functions of a particular general form, which includes ridge regression and SVMs but not lasso regression, we can \"kernelize\", which can allow significant speedups in certain situations.  In fact, with the \"kernel trick\", we can even use an infinite-dimensional feature space at a computational cost that depends primarily on the training set size.</p>
 <details><p><summary>More...</summary>In more detail, it turns out that even when the optimal parameter vector we're searching for lives in a very high-dimensional vector space (dimension being the number of features), a basic linear algebra argument shows that for certain objective functions, the optimal parameter vector lives in a subspace spanned by the training input vectors. Thus, when we have more features than training points, we may be better off restricting our search to the lower-dimensional subspace spanned by training inputs. We can do this by an easy reparameterization of the objective function. This result is referred to as the \"representer theorem\", and its proof can be given on one slide.</p>
-  <p>After reparameterization, we'll find that the objective function depends on the data only through the Gram matrix, or \"kernel matrix\", which contains the dot products between all pairs of training feature vectors. This is where things get interesting a second time: Suppose f is our featurization function. Sometimes the dot product between two feature vectors f(x) and f(x') can be computed much more efficiently than multiplying together corresponding features and summing. In such a situation, we write the dot products in terms of the \"kernel function\": k(x,x')=〈f(x),f(x')〉, which we hope to compute much more quickly than O(d), where d is the dimension of the feature space. Using this \"kernel trick\", together with the reparameterization described above, is the essence of a \"kernel method\", and it allows one to use huge (even infinite-dimensional) feature spaces with a computational burden that depends primarily on the size of your training set. In practice, it's useful for small and medium-sized datasets for which computing the kernel matrix is tractable. Scaling kernel methods to large data sets is still an active area of research.<p></details>"
+  <p>After reparameterization, we'll find that the objective function depends on the data only through the Gram matrix, or \"kernel matrix\", which contains the dot products between all pairs of training feature vectors. This is where things get interesting a second time: Suppose f is our featurization function. Sometimes the dot product between two feature vectors f(x) and f(x') can be computed much more efficiently than multiplying together corresponding features and summing. In such a situation, we write the dot products in terms of the \"kernel function\": k(x,x')=〈f(x),f(x')〉, which we hope to compute much more quickly than O(d), where d is the dimension of the feature space. The essence of a \"kernel method\" is to use this \"kernel trick\" together with the reparameterization described above.  This allows one to use huge (even infinite-dimensional) feature spaces with a computational burden that depends primarily on the size of your training set. In practice, it's useful for small and medium-sized datasets for which computing the kernel matrix is tractable. Scaling kernel methods to large data sets is still an active area of research.<p></details>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/06a.kernel-methods.pdf"
   Video: "https://www.youtube.com/embed/m1otj-SdwYw"
   References:
@@ -149,10 +166,11 @@
   CChecks:
     - {Kernel Concept Check Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/5-Lab-Check.pdf"}
     - {Kernel Concept Check Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/5-Lab-Check_sol.pdf"}
+    - {"Homework 4": "#assignment-homework-4"}
 -
 #: zero-information prediction function, single-feature prediction functions, regularized linear models, and controversially an \"oracle\" model that is trained on your validation data, to get an idea of the upper bound of performance for your learning method.
   Title: "14. Performance Evaluation"
-  Summary: "<p>This is our second \"black-box\" machine learning lecture. We start by discussing various baseline models that you should always compare your prediction functions to, as sanity checks. From there we focus primarily on evaluating classifier performance.  We define a whole slew of performance statistics used in practice. We also discuss the fact that most classifiers provide a numeric score, and if you need to make a hard classification, you should tune your threshold to optimize the performance metric of importance to you, rather than just using the default (typically 0 or 0.5). We also discuss the various performance curves you'll see in practice: precision/recall, ROC, and (my personal favorite) lift curves.</p>"
+  Summary: "<p>This is our second \"black-box\" machine learning lecture. We start by discussing various models that you should almost ways build for your data, to use as baselines and performance sanity checks. From there we focus primarily on evaluating classifier performance.  We define a whole slew of performance statistics used in practice (precision, recall, F1, etc.). We also discuss the fact that most classifiers provide a numeric score, and if you need to make a hard classification, you should tune your threshold to optimize the performance metric of importance to you, rather than just using the default (typically 0 or 0.5). We also discuss the various performance curves you'll see in practice: precision/recall, ROC, and (my personal favorite) lift curves.</p>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/06b.classifier-performance.pdf"
   Video: "https://www.youtube.com/embed/xMyAL0C6cPY"
   References:
@@ -160,16 +178,18 @@
 -
   Title: "15. \"CitySense\": Probabilistic Modeling for Unusual Behavior Detection"
 #  <p>In this lecture, we take a \"bare hands\" approach to building these conditional probability models. While I consider these techniques to be very useful in practice, if you're eager to get to some mathematics, you may safely skip this lecture.</p>"
-  Summary: "<p>So far we have studied the regression setting, for which our predictions (i.e. 'actions') are real-valued, as well as the classification setting, for which our score functions also produce real values. With this lecture, we begin our consideration of \"conditional probability models\", in which the predictions are probability distributions over possible outcomes. We motivate these models by discussion of the \"CitySense\" problem, in which we want to predict the probability distribution for the number of taxicab pickups at each street corner, at different times of the week. We can use a conditional probability model to predict likely outcomes, as well as to detect anomalies.</p>"
+  Summary: "<p>So far we have studied the regression setting, for which our predictions (i.e. \"actions\") are real-valued, as well as the classification setting, for which our score functions also produce real values. With this lecture, we begin our consideration of \"conditional probability models\", in which the predictions are probability distributions over possible outcomes. We motivate these models by discussion of the \"CitySense\" problem, in which we want to predict the probability distribution for the number of taxicab dropoffs at each street corner, at different times of the week. Given this model, we can then determine, in real-time, how \"unusual\" the amount of behavior is at various parts of the city, and thereby help you find the secret parties, which is of course the ultimate goal of machine learning.</p>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/08a.citysense.pdf"
   Video: "https://www.youtube.com/embed/6nolrvzXiE4"
   References:
     - {"CitySense: multiscale space time clustering of GPS points and trajectories": http://www1.cs.columbia.edu/~jebara/papers/CitySense.JSM2009.pdf}
 -
   Title: "16. Maximum Likelihood Estimation"
-  Summary: "In empirical risk minimization, we minimize the average loss on a training set. If our prediction functions are producing probability distributions, what loss functions will give a reasonable performance measure? In this lecture, we discuss \"likelihood\", one of the most popular performance measures for distributions. We temporarily leave aside the conditional probability modeling problem, and focus on the simpler problem of fitting an unconditional probability model to data. We can use \"maximum likelihood\" to fit both parametric and nonparametric models. Once we have developed a collection of candidate probability distributions on training data, we select the best one by choosing the model that has highest \"hold-out likelihood\", i.e. likelihood on validation data."
+  Summary: "In empirical risk minimization, we minimize the average loss on a training set. If our prediction functions are producing probability distributions, what loss functions will give reasonable performance measures? In this lecture, we discuss \"likelihood\", one of the most popular performance measures for distributions. We temporarily leave aside the conditional probability modeling problem, and focus on the simpler problem of fitting an unconditional probability model to data. We can use \"maximum likelihood\" to fit both parametric and nonparametric models. Once we have developed a collection of candidate probability distributions on training data, we select the best one by choosing the model that has highest \"hold-out likelihood\", i.e. likelihood on validation data."
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/08b.MLE.pdf"
   Video: "https://www.youtube.com/embed/ec_5vvxW7fE"
+  CChecks:
+    - {"Homework 5: §7,8": "#assignment-homework-5"}
 -
   Title: "17. Conditional Probability Models"
   Summary: "In this lecture we consider prediction functions that produce distributions from a parametric family of distributions. We restrict to the case of linear models, though later in the course we will show how to make nonlinear versions using gradient boosting and neural networks. We develop the technique through four examples: Bernoulli regression (logistic regression being a special case), Poisson regression, Gaussian regression, and multinomial logistic regression (our first multiclass method). We conclude by connecting this maximum likelihood framework back to our empirical risk minimization framework."
@@ -181,15 +201,17 @@
   CChecks:
     - {Conditional Model Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/10-Lab-Check.pdf"}
     - {Conditional Model Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/10-Lab-Check_sol.pdf"}
+    - {"Homework 5: §3": "#assignment-homework-5"}
   Video: "https://www.youtube.com/embed/JrFj0xpGd2Q"
 -
   Title: "18. Bayesian Methods"
-  Summary: "<p>We review some basics of classical and Bayesian statistics. For classical \"frequentist\" statistics, we define statistics and point estimators, and discuss various desirable properties of point estimators. For Bayesian statistics, we introduce the \"prior distribution\", which is a distribution on the parameter space that you declare before seeing any data. We compare the two approaches for the simple problem of learning about a coin's probability of heads. Along the way, we discuss conjugate priors, Bayesian point estimators, posterior distributions, and credible sets. Finally, we give the basic setup for Bayesian decision theory, which is how a Bayesian would go from a posterior distribution to choosing an action.</p>"
+  Summary: "<p>We review some basics of classical and Bayesian statistics. For classical \"frequentist\" statistics, we define statistics and point estimators, and discuss various desirable properties of point estimators. For Bayesian statistics, we introduce the \"prior distribution\", which is a distribution on the parameter space that you declare before seeing any data. We compare the two approaches for the simple problem of learning about a coin's probability of heads. Along the way, we discuss conjugate priors, posterior distributions, and credible sets. Finally, we give the basic setup for Bayesian decision theory, which is how a Bayesian would go from a posterior distribution to choosing an action.</p>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/09a.bayesian-methods.pdf"
   Video: "https://www.youtube.com/embed/VCfrGjDPC6k"
   CChecks:
     - {Bayesian Methods and Regression Questions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/11-Lec-Check.pdf"}
     - {Bayesian Methods and Regression Solutions: "https://davidrosenberg.github.io/mlcourse/ConceptChecks/11-Lec-Check_sol.pdf"}
+    - {"Homework 5: §7,8": "#assignment-homework-5"}
   Notes:
     - {"Proportionality Review": "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Notes/proportionality.pdf"}
     - {"Thompson Sampling for Bernoulli Bandits [Optional]": "https://davidrosenberg.github.io/mlcourse/in-prep/thompson-sampling-bernoulli.pdf"}
@@ -208,9 +230,14 @@
     - "Bishop 3.3"
 -
   Title: "20. Classification and Regression Trees"
-  Summary: "We begin our discussion of nonlinear models with tree models. We first describe the hypothesis space of decision trees, and we discuss some complexity measure we can use for regularization, including tree depth and the number of leaf nodes.  The challenge starts when we try to find the regularized empirical risk minimizer (ERM) over this space for some loss function. It turns out finding this ERM is computationally intractable. We discuss a standard greedy approach to tree building, both for classification and regression, in the case that features take values in any ordered set. We also describe an approach for handling categorical variables (in the binary classification case) and missing values."
+  Summary: "We begin our discussion of nonlinear models with tree models. We first describe the hypothesis space of decision trees, and we discuss some complexity measures we can use for regularization, including tree depth and the number of leaf nodes.  The challenge starts when we try to find the regularized empirical risk minimizer (ERM) over this space for some loss function. It turns out finding this ERM is computationally intractable. We discuss a standard greedy approach to tree building, both for classification and regression, in the case that features take values in any ordered set. We also describe an approach for handling categorical variables (in the binary classification case) and missing values."
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/10a.trees.pdf"
   Video: "https://www.youtube.com/embed/GZuweldJWrM"
+  Notes:
+    - {Categorical variables with trees (ipynb): "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Contrib/trees/categorical_variables.ipynb"}
+    - {Missing data and surrogate splits (ipynb): "https://github.com/davidrosenberg/mlcourse/blob/gh-pages/Contrib/trees/surrogate_split.ipynb"}
+  CChecks:
+    - {"Homework 6: §6": "#assignment-homework-6"}
   References:
     - "JWHT 8.1"
     - "HTF 9.2"
@@ -239,10 +266,12 @@
     - {A Conversation with Jerry Friedman: "https://arxiv.org/pdf/1507.08502.pdf"}
 -
   Title: "23. Gradient Boosting"
-  Summary: "<p>Gradient boosting is an approach to \"adaptive basis function modeling\", in which we learn a linear combination of M basis functions, which are themselves learned from a base hypothesis space H.  Gradient boosting may do ERM with any subdifferentiable loss function over any base hypothesis space on which we can do regression. Regression trees are the most commonly used base hypothesis space. It is important to note that the \"regression\" in \"gradient boosted regression trees\" (GBRTs) refers to how we fit the basis functions, not the overall loss function.  GBRTs can used for classification and conditional probability modeling. GBRTs are among the most dominant methods in competitive machine learning (e.g. Kaggle competitions).</p>
+  Summary: "<p>Gradient boosting is an approach to \"adaptive basis function modeling\", in which we learn a linear combination of M basis functions, which are themselves learned from a base hypothesis space H.  Gradient boosting may be used with any subdifferentiable loss function and over any base hypothesis space on which we can do regression. Regression trees are the most commonly used base hypothesis space. It is important to note that the \"regression\" in \"gradient boosted regression trees\" (GBRTs) refers to how we fit the basis functions, not the overall loss function.  GBRTs are routinely used for classification and conditional probability modeling. They are among the most dominant methods in competitive machine learning (e.g. Kaggle competitions).</p>
 <details>
   <p><summary>More...</summary>If the base hypothesis space H has a nice parameterization (say differentiable, in a certain sense), then we may be able to use standard gradient-based optimization methods directly. In fact, neural networks may be considered in this category. However, if the base hypothesis space H consists of trees, then no such parameterization exists.  This is where gradient boosting is really needed.</p>
-  <p>For practical applications, it would be worth checking out the GBRT implementations in <a href=\"https://xgboost.ai/\">XGBoost</a> and <a href=\"https://github.com/Microsoft/lightGBM\">LightGBM</a>.</p></details>"
+  <p>For practical applications, it would be worth checking out the GBRT implementations in <a href=\"https://xgboost.ai/\">XGBoost</a> and <a href=\"https://github.com/Microsoft/lightGBM\">LightGBM</a>.</p>
+  <p>See the Notes below for fully worked examples of doing gradient boosting for classification, using the hinge loss, and for conditional probability modeling using both exponential and Poisson distributions.  The code gbm.py illustrates L2-boosting and L1-boosting with decision stumps, for a one-dimensional regression dataset.</p>
+</details>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/11a.gradient-boosting.pdf"
   Video: "https://www.youtube.com/embed/fz1H03ZKvLM"
   Notes:
@@ -251,6 +280,8 @@
     - {"Exponential Distribution Gradient Boosting": "https://davidrosenberg.github.io/mlcourse/Notes/conditional-exponential-distributions.pdf"}
     - {"Poisson Gradient Boosting": "https://davidrosenberg.github.io/mlcourse/Notes/poisson-gradient-boosting.pdf"}
     - {"gbm.py": "https://davidrosenberg.github.io/mlcourse/Archive/2017/Labs/gbm.py"}
+  CChecks:
+    - {"Homework 6: §7,8": "#assignment-homework-6"}
   References:
     - {"Friedman's GBM Paper": http://statweb.stanford.edu/~jhf/ftp/trebst.pdf}
     - {"Ridgeway's GBM Guide": http://www.saedsayad.com/docs/gbm2.pdf}
@@ -258,12 +289,13 @@
 #    - {"Bühlmann and Hothorn's Boosting Paper": https://projecteuclid.org/euclid.ss/1207580163}
 -
   Title: "24. Multiclass and Introduction to Structured Prediction"
-  Summary: "Here we consider how to generalize the score-producing binary classification methods we've discussed (e.g. SVM and logistic regression) to multiclass settings. We start by discussing 'One-vs-All', a simple reduction of multiclass to binary classification. This usually works just fine in practice, despite the interesting failure case we illustrate. However, One-vs-All doesn't scale to a very large number of classes since we have to train a separate model for each class. This is the real motivation for presenting the \"compatibility function\" approach described in this lecture. The approach presented here extends to structured prediction problems, where the output space may be exponentially large. We didn't have time to define structured prediction in the lecture, but please see the slides and the SSBD book in the references."
+  Summary: "Here we consider how to generalize the score-producing binary classification methods we've discussed (e.g. SVM and logistic regression) to multiclass settings. We start by discussing \"One-vs-All\", a simple reduction of multiclass to binary classification. This usually works just fine in practice, despite the interesting failure case we illustrate. However, One-vs-All doesn't scale to a very large number of classes, since we have to train a separate model for each class. This is the real motivation for presenting the \"compatibility function\" approach described in this lecture. The approach presented here extends to structured prediction problems, where the output space may be exponentially large. We didn't have time to define structured prediction in the lecture, but please see the slides and the SSBD book in the references."
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/11b.multiclass.pdf"
   Video: "https://www.youtube.com/embed/WMQwtoMUjDA"
   CChecks:
     - {"Multiclass Questions": "https://davidrosenberg.github.io/mlcourse/ConceptChecks/7-Lec-Check.pdf"}
     - {"Multiclass Solutions": "https://davidrosenberg.github.io/mlcourse/ConceptChecks/7-Lec-Check_sol.pdf"}
+    - {"Homework 6: §1-5": "#assignment-homework-6"}
   References:
     - "SSBD 17.1-17.3"
     - {In Defense of One-vs-All Classification: "http://www.jmlr.org/papers/v5/rifkin04a.html"}
@@ -286,7 +318,7 @@
     - {"An Alternative to EM for GMM [Optional]": "https://arxiv.org/pdf/1706.03267.pdf"}
 -
   Title: "27. EM Algorithm for Latent Variable Models"
-  Summary: "It turns out, fitting a Gaussian mixture model by maximum likelihood is easier said than done: there is no closed from solution, and our usual gradient methods do not work well. The standard approach to maximum likelihood estimation in a Gaussian mixture model is the expectation maximization algorithm. In this lecture, we present the EM algorithm in the general setting of latent variable models, of which GMM is a special case. We present the EM algorithm as a very basic \"variational method\" and indicate a few generalizations."
+  Summary: "It turns out, fitting a Gaussian mixture model by maximum likelihood is easier said than done: there is no closed from solution, and our usual gradient methods do not work well. The standard approach to maximum likelihood estimation in a Gaussian mixture model is the expectation maximization (EM) algorithm. In this lecture, we present the EM algorithm in the general setting of latent variable models, of which GMM is a special case. We present the EM algorithm as a very basic \"variational method\" and indicate a few generalizations."
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/13c.EM-algorithm.pdf"
   Video: "https://www.youtube.com/embed/lMShR1vjbUo"
   References:
@@ -297,11 +329,15 @@
   Summary: "In the context of this course, we view neural networks as \"just\" another nonlinear hypothesis space. On the practical side, unlike trees and tree-based ensembles (our other major nonlinear hypothesis spaces), neural networks can be fit using gradient-based optimization methods. On the theoretical side, a large enough neural network can approximate any continuous function. We discuss the specific case of the multilayer perceptron for multiclass classification, which we view as a generalization of multinomial logistic regression from linear to nonlinear score functions."
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/14a.neural-networks.pdf"
   Video: "https://www.youtube.com/embed/Wr11D5sObzc"
+  References:
+    - {"Michael Nielsen's chapter on universality of neural networks": "http://neuralnetworksanddeeplearning.com/chap4.html"}
 -
   Title: "29. Backpropagation and the Chain Rule"
   Summary: "<p>Neural network optimization is amenable to gradient-based methods, but if the actual computation of the gradient is done naively, the computational cost can be prohibitive. Backpropagation is the standard algorithm for computing the gradient efficiently. We present the backpropagation algorithm for a general computation graph. The algorithm we present applies, without change, to models with \"parameter tying\", which include convolutional networks and recurrent neural networks (RNN's), the workhorses of modern computer vision and natural language processing. We illustrate backpropagation with one of the simplest models with parameter tying: regularized linear regression. Backpropagation for the multilayer perceptron, the standard introductory example, is presented in detail in <a href=\"#assignment-homework-7\">Hwk 7 Problem 4</a>.</p>"
   Slides: "https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/14b.backpropagation.pdf"
   Video: "https://www.youtube.com/embed/XIpyEvLv93A"
+  CChecks:
+    - {"Homework 7": "#assignment-homework-7"}
   References:
     - {'Yes you should understand backprop (Karpathy)': "https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b"}
     - {'Challenges with backprop (Karpathy Lecture)': "https://youtu.be/gYpoJMlgyXA?t=13m44s"}
